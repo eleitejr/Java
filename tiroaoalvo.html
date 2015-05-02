@@ -26,8 +26,8 @@ var sorteia = function(numero) {
 }
 var desenha = function() {
   limpa();
-  alvoX = sorteia(800);
-  alvoY = sorteia(600);
+  alvoX = sorteia(800-raio) + raio;
+  alvoY = sorteia(600-raio) + raio;
   desenhaAlvo(alvoX, alvoY);
 };
 setInterval(desenha, 3000);
