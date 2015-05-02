@@ -1,0 +1,44 @@
+canvas id="tela" width="800" height="600"></canvas>
+
+<script>
+var raio = 40;
+var alvoX;
+var alvoY;
+var tela = document.getElementById("tela");
+var c = tela.getContext("2d");
+var desenhaAlvo = function(x, y) {
+    circulo(x, y, raio-30, "white");
+    circulo(x, y, raio-20, "red");
+    circulo(x, y, raio-10, "white");
+    circulo(x, y, raio, "red");
+};
+var circulo = function(x,y,raio, cor) {
+	c.fillStyle = cor;
+	c.beginPath();
+	c.arc(x,y,raio, 0, 2*Math.PI);
+	c.fill();
+}
+var limpa = function() {
+	c.clearRect(0,0,800,600);
+}
+var sorteia = function(numero) {
+	return Math.floor(Math.random() * numero);
+}
+var desenha = function() {
+  limpa();
+  alvoX = sorteia(800);
+  alvoY = sorteia(600);
+  desenhaAlvo(alvoX, alvoY);
+};
+setInterval(desenha, 3000);
+tela.onclick = function(evento) {
+	var x = evento.pageX - tela.offsetLeft;
+	var y = evento.pageY - tela.offsetTop;
+	
+	if((x > alvoX - raio) && (x < alvoX + raio) && 
+		(y > alvoY - raio) && (y < alvoY + raio)) {
+			alert("acertou!");
+	}
+//	alert("x " + x + " " + " y " + " alvoX " + alvoX + " alvoY " + alvoY);
+}       
+</script>
