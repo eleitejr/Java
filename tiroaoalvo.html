@@ -1,4 +1,4 @@
-canvas id="tela" width="800" height="600"></canvas>
+<canvas id="tela" width="800" height="600"></canvas>
 
 <script>
 var raio = 40;
@@ -7,10 +7,11 @@ var alvoY;
 var tela = document.getElementById("tela");
 var c = tela.getContext("2d");
 var desenhaAlvo = function(x, y) {
-    circulo(x, y, raio-30, "white");
-    circulo(x, y, raio-20, "red");
-    circulo(x, y, raio-10, "white");
     circulo(x, y, raio, "red");
+	circulo(x, y, raio-10, "white");
+    circulo(x, y, raio-20, "red");
+    circulo(x, y, raio-30, "white");
+    
 };
 var circulo = function(x,y,raio, cor) {
 	c.fillStyle = cor;
@@ -30,14 +31,14 @@ var desenha = function() {
   alvoY = sorteia(600-raio) + raio;
   desenhaAlvo(alvoX, alvoY);
 };
-setInterval(desenha, 3000);
+setInterval(desenha, 1000);
 tela.onclick = function(evento) {
 	var x = evento.pageX - tela.offsetLeft;
 	var y = evento.pageY - tela.offsetTop;
 	
 	if((x > alvoX - raio) && (x < alvoX + raio) && 
 		(y > alvoY - raio) && (y < alvoY + raio)) {
-			alert("acertou!");
-	}
+			alert("ACERTOU!!!");
+	} else alert("ERROU...")
 }       
 </script>
