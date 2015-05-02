@@ -1,4 +1,4 @@
 MeuRepositorio
 =====
 Meu repositório de programas:
-- Algums prg do Alura
+- Algums programas do Alura
