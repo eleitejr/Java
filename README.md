@@ -1,4 +1,5 @@
 MeuRepositorio
 =====
 Meu repositório de programas:
-- Algums programas do Alura
+- Alguns programas do Curso Alura
+- Progração em Java
