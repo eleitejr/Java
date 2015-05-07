@@ -52,7 +52,8 @@ public class Romano {
 		valArabico = 0;
 		int tamanho = r.length();
 		
-		if (isRoman(r)) // verifica se o String r representa um numero no formato romano. {
+		if (isRoman(r)) // verifica se o String r representa um numero no formato romano. 
+			{
 				
 			for (int k = 0; k < tamanho; k++){
 				
