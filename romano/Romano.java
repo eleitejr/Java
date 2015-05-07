@@ -137,13 +137,13 @@ public class Romano {
 			
 				char t = r.charAt(j);
 				
-				if (	   t != 'M' 
-						&& t != 'D' 
-						&& t != 'C' 
-						&& t != 'L' 
-						&& t != 'X' 
-						&& t != 'V' 
-						&& t != 'I' ) return false;
+					if (	   t != 'M' && t != 'm'
+						&& t != 'D' && t != 'd'
+						&& t != 'C' && t != 'c'
+						&& t != 'L' && t != 'l'
+						&& t != 'X' && t != 'x'
+						&& t != 'V' && t != 'v'
+						&& t != 'I' && t != 'i' ) return false;
 				
 		}	
 		return true;
