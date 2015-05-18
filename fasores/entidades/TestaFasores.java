@@ -3,6 +3,14 @@ package entidades;
 import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 
+/**
+ * @class TestaFasores
+ * 	Test Class for Fasor class
+ * @erasmoleitejr
+ * @date 2015/05/01
+ * 
+ **/
+
 public class TestaFasores {
 
 	public static void main(String[] args) throws NumberFormatException{
