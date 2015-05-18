@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 /**
  * @class TestaFasores
  * 	Test Class for Fasor class
- * @erasmoleitejr
+ * @author erasmoleitejr
  * @date 2015/05/01
  * 
  **/
